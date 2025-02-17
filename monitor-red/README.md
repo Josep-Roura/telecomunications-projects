@@ -14,7 +14,7 @@ Este proyecto es una herramienta para monitorear la red local en tiempo real uti
 
 Puedes instalar las bibliotecas necesarias utilizando pip:
 
-```
+```sh
 pip install scapy ping3 prettytable requests netifaces
 ```
 
@@ -31,18 +31,19 @@ El script realiza las siguientes funciones:
 
 Para ejecutar el script, simplemente corre el archivo Python:
 
-```
+```sh
 python src/main.py
 ```
 
 ### Resultado Ejemplo
-'''
+
+```
 Escaneando la red 172.20.10.0/28...
 Dispositivos encontrados en la red: 172.20.10.0/28
 +-------------+-------------------+-----------------+----------+
 |      IP     |         MAC       |    Proveedor    | Latencia |
 +-------------+-------------------+-----------------+----------+
-| 172.20.10.2 | 0F:7F:7B:57:37:C5 | Intel Corporate |   472    |
-| 172.20.10.1 | 1F:CD:53:F4:DE:A7 |   Desconocido   |   783    |
+| 172.20.10.2 | 0F:7F:7B:57:37:C5 | Intel Corporate |   472 ms |
+| 172.20.10.1 | 1F:CD:53:F4:DE:A7 |   Desconocido   |   783 ms |
 +-------------+-------------------+-----------------+----------+
-'''
+```
