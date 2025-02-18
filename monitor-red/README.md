@@ -1,7 +1,5 @@
 # Monitor de Red en Tiempo Real con Python
 
-# Monitor de Red en Tiempo Real con Python
-
 Este proyecto es una herramienta para monitorear la red local en tiempo real utilizando Python. Permite escanear la red para identificar dispositivos conectados, obtener información sobre ellos y medir la latencia de respuesta.
 
 ## Requisitos
