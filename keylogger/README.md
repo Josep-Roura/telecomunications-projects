@@ -1,51 +1,51 @@
-# Keylogger con Envío de Correos
+# Keylogger with Email Sending
 
-Este proyecto es un keylogger en Python que registra las teclas presionadas por el usuario y las guarda en un archivo `text.txt`. Cada 20 teclas registradas, el archivo se envía automáticamente por correo electrónico al destinatario configurado.
+This project is a Python keylogger that records user keystrokes and saves them in a `text.txt` file. Every 20 keystrokes, the file is automatically sent via email to the configured recipient.
 
-## 📌 Características
-- Captura las teclas presionadas y las almacena en `text.txt`.
-- Detecta teclas especiales (`Enter`, `Shift`, `Ctrl`, etc.) y las almacena correctamente.
-- Envía automáticamente el archivo de registro por correo electrónico cada 20 teclas presionadas.
-- Usa `pynput` para la captura del teclado.
-- Utiliza `smtplib` para enviar los correos con Gmail.
+## 📌 Features
+- Captures pressed keys and stores them in `text.txt`.
+- Detects special keys (`Enter`, `Shift`, `Ctrl`, etc.) and logs them correctly.
+- Automatically sends the log file via email every 20 keystrokes.
+- Uses `pynput` for keyboard input capture.
+- Utilizes `smtplib` for sending emails via Gmail.
 
-## 🚀 Instalación
-### 1. Clonar el repositorio
+## 🚀 Installation
+### 1. Clone the Repository
 ```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/your_username/your_repository.git
+cd your_repository
 ```
 
-### 2. Instalar dependencias
-Asegúrate de tener Python 3 instalado y ejecuta:
+### 2. Install Dependencies
+Ensure you have Python 3 installed and run:
 ```sh
 pip install pynput
 ```
 
-## 📧 Configuración del Correo Electrónico
-Para enviar correos usando Gmail:
-1. **Habilita la verificación en dos pasos** en tu cuenta de Google.
-2. **Genera una contraseña de aplicación** en [Google Security](https://myaccount.google.com/security).
-3. **Reemplaza tu contraseña en el script** con la contraseña de aplicación generada.
+## 📧 Email Configuration
+To send emails using Gmail:
+1. **Enable two-step verification** on your Google account.
+2. **Generate an application-specific password** at [Google Security](https://myaccount.google.com/security).
+3. **Replace your password in the script** with the generated application password.
 
-En el archivo `main.py`, modifica esta línea:
+Modify this line in `main.py`:
 ```python
-sesion_smtp.login('tu_email@gmail.com', 'TU_CONTRASEÑA_DE_APLICACIÓN')
+sesion_smtp.login('your_email@gmail.com', 'YOUR_APPLICATION_PASSWORD')
 ```
 
-⚠ **No uses tu contraseña real de Gmail en el código.**
+⚠ **Do not use your real Gmail password in the code.**
 
-## 🛠️ Uso
-Ejecuta el script con:
+## 🛠️ Usage
+Run the script with:
 ```sh
 python main.py
 ```
-El keylogger comenzará a capturar las teclas y, cada 20 pulsaciones, enviará el archivo `text.txt` a tu correo.
+The keylogger will start recording keystrokes, and every 20 keystrokes, it will send the `text.txt` file to your email.
 
-## ⚠️ Advertencia Legal
-Este software debe usarse **solo para propósitos educativos y pruebas de seguridad**. **No lo uses en sistemas sin consentimiento explícito**, ya que puede violar leyes de privacidad y ciberseguridad.
+## ⚠️ Legal Warning
+This software is intended **only for educational purposes and security testing**. **Do not use it on systems without explicit consent**, as it may violate privacy and cybersecurity laws.
 
 ---
-**Autor:** Tu Nombre  
-📧 Contacto: tu_email@gmail.com
+**Author:** Josep Roura
+📧 Contact: joseprouraf@gmail.com
 

