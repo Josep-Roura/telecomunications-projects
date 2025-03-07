@@ -24,7 +24,7 @@ A Python script to scan open ports on a target system and identify potential vul
 ## 🚀 Cloning the Repository
 To clone all projects at once, run:
 ```sh
-git clone https://github.com/your_username/telecom_cybersecurity_projects.git
+git clone https://github.com/Josep-Roura/telecomunications-projects.git
 ```
 
 ## 🛠️ Technologies Used
