@@ -12,7 +12,7 @@ This project is a Python keylogger that records user keystrokes and saves them i
 ## 🚀 Installation
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/your_username/your_repository.git
+git clone https://github.com/Josep-Roura/telecomunications-projects.git
 cd your_repository
 ```
 

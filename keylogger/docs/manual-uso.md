@@ -12,7 +12,7 @@ This manual explains how to install, configure, and run the Python keylogger, wh
 ## 🚀 **Installation**
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your_username/your_repository.git
+git clone https://github.com/Josep-Roura/telecomunications-projects.git
 cd your_repository
 ```
 
@@ -49,11 +49,6 @@ python main.py
 ```
 
 The keylogger will run in the background, recording pressed keys. Every 20 keystrokes, it will send the `log.txt` file to the configured email address.
-
----
-
-## ❌ **Stop the Keylogger**
-To stop the script, press `Ctrl + C` in the terminal or close the window where it is running.
 
 ---
 
