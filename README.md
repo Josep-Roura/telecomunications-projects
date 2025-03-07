@@ -21,6 +21,9 @@ A tool for monitoring network activity, detecting connected devices, and analyzi
 ### 🔹 **Port Scanner**
 A Python script to scan open ports on a target system and identify potential vulnerabilities.
 
+### 🔹 **Dictionary-Based Brute Force**
+A Python script that performs brute force attacks using a dictionary of common passwords to test the security of password-protected gmail system.
+
 ## 🚀 Cloning the Repository
 To clone all projects at once, run:
 ```sh
