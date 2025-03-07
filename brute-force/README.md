@@ -31,6 +31,12 @@ The script uses the `smtplib` library to connect to an SMTP server and attempt t
 - **Password Testing Loop**: Reads passwords from the file, strips whitespace, and attempts to log in.
 - **Error Handling**: Catches and handles file not found errors and other exceptions.
 
+### Important Note
+
+If the dictionary is too long, Gmail might block the login attempts. There are two possible solutions:
+1. Manually remove the tested passwords from the dictionary file and re-run the script.
+2. Implement an IP change mechanism to avoid being blocked.
+
 ## Disclaimer
 
 This script is for educational purposes only. Unauthorized access to email accounts is illegal and unethical. Use this script responsibly and only on accounts you own or have explicit permission to test.
