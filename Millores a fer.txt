@@ -1,0 +1,9 @@
+Monitor-red Comentaris mb angles 
+Acabar projecte test-ports (repensar)
+	- Observar els ports duna IP, i analizar quin pot ser vulnerable
+	- Observar tots els ports de la red i mirar quins ports te cada IP oberts + identificacio de ports amb posibles vulnerabilitats
+- Fer projecte HoneyPot
+- Fer README trojan + comentaris i docs
+- Buscar projecte BLUE TEAM diferenciatiu
+- Enviar Cartes per fer practica
+- Millorar descripcio projectes

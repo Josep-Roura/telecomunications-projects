@@ -7,7 +7,7 @@ import requests
 
 
 def comprobation_wifi(IP):
-    print(f"🔍 Searching IP attacker {IP}...")
+    print(f"Searching IP attacker {IP}...")
 
     solicitud = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=IP)
     respuesta, _ = srp(solicitud, timeout=2, verbose=False)

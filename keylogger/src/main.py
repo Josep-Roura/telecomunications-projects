@@ -32,8 +32,8 @@ def send_email():
 
         # Attach the log file
         with open(filename, 'rb') as file:
-            attachment = MIMEBase('application', 'octet-stream')
             attachment.set_payload(file.read())
+            attachment = MIMEBase('application', 'octet-stream')
             encoders.encode_base64(attachment)
             attachment.add_header('Content-Disposition', f'attachment; filename={filename}')
             email_message.attach(attachment)

@@ -41,6 +41,7 @@ def arp_scan(ipNet):
         ipNet (str): Red en formato CIDR donde se realizará el escaneo.
     """
     print(f"🔍 Escaneando la red {ipNet}...")
+    
 
     solicitud = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=ipNet)
     respuesta, _ = srp(solicitud, timeout=2, verbose=False)
