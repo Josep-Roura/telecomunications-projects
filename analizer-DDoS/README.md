@@ -176,12 +176,3 @@ Estudiante de Ingeniería de Telecomunicaciones y apasionado por la **cibersegur
 
 * [LinkedIn](https://www.linkedin.com/in/josep-roura-fernandez)
 * [GitHub](https://github.com/<usuario>)
-
----
-
-```
-
----
-
-¿Quieres que te prepare también un **`CHANGELOG.md`** inicial para acompañar al README y darle todavía más nivel profesional en GitHub?
-```
