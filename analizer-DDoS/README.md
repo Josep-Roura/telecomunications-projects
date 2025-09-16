@@ -1,123 +1,189 @@
-# DDoS Attack Detection System
+```markdown
+# 🛡️ DDoS Analyzer with Machine Learning & Dashboard
 
-This project is a **DDoS Attack Detection System** developed in **Python** using **Scapy** for network traffic monitoring. The system identifies potential DDoS attacks by analyzing incoming network traffic, detecting IPs that exceed a predefined request threshold, and sending alerts via **Telegram**. Additionally, all alerts are logged in a `.txt` file for reference.
-
----
-
-## 🚀 Features
-
-✅ Real-time network traffic monitoring.  
-✅ Detects IP addresses exceeding the request threshold.  
-✅ Sends alerts to a Telegram group.  
-✅ Logs all alerts in a `.txt` file for later analysis.  
-✅ Implements a **temporary IP blocking system** to prevent repeated alerts.  
+Este proyecto es un **sistema de detección de ataques DDoS** desarrollado en **Python**.  
+Integra captura de tráfico en tiempo real, análisis híbrido (reglas + ML), base de datos para eventos, alertas vía Telegram y un dashboard interactivo en **Streamlit**.  
 
 ---
 
-## 🛠️ Requirements
+## ✨ Características principales
 
-Before running the project, ensure you have the following dependencies installed:
+- 📡 **Captura en tiempo real** con [Scapy](https://scapy.net/).  
+- 🧠 **Detección híbrida**:  
+  - Umbrales configurables (requests/time window).  
+  - Modelo de **Isolation Forest** para anomalías.  
+- 💾 **Base de datos SQLite** para eventos y blocklist.  
+- 📊 **Dashboard interactivo** con [Streamlit](https://streamlit.io/):  
+  - KPIs de tráfico y anomalías.  
+  - Listado de eventos sospechosos.  
+  - Gráficos de evolución temporal.  
+  - Bloqueo manual de IPs.  
+  - Exportación y programación de reportes.  
+- 📲 **Alertas en Telegram** en tiempo real.  
+- ⚡ **Script de arranque unificado** (`start-all.ps1`) que inicializa entorno, BD, detector y dashboard.  
 
-- **Python 3.x**
-- **Scapy**
-- **Requests**
+---
 
-### Install Dependencies
+## 📂 Estructura del proyecto
+
 ```
-pip install scapy requests
+
+analizer-DDoS/
+│── src/
+│   ├── main.py          # Núcleo: captura, análisis y alertas
+│   ├── capture.py       # Funciones de captura de tráfico
+│   ├── db.py            # Gestión SQLite (eventos, blocklist, reportes)
+│   ├── ml.py            # ML: Isolation Forest + features
+│   ├── config.py        # Configuración vía .env
+│── dashboard/
+│   ├── app.py           # Dashboard Streamlit
+│── models/
+│   ├── iforest.joblib   # Modelo ML entrenado
+│── data/
+│   ├── events.db        # Base de datos local
+│── start-all.ps1        # Script para lanzar todo
+│── requirements.txt     # Dependencias
+│── .env.example         # Ejemplo configuración
+│── README.md
+
+````
+
+---
+
+## ⚙️ Instalación y configuración
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/<usuario>/analizer-DDoS.git
+   cd analizer-DDoS
+````
+
+2. Crear entorno virtual:
+
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1   # Windows
+   source .venv/bin/activate      # Linux/Mac
+   ```
+
+3. Instalar dependencias:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Configurar variables en `.env`:
+
+   ```ini
+   MY_IP=192.168.1.34
+   REQUEST_THRESHOLD=5
+   TIME_WINDOW=5
+   BLOCK_TIME=15
+   TELEGRAM_TOKEN=xxxxx
+   TELEGRAM_CHAT_ID=yyyyy
+   ```
+
+---
+
+## ▶️ Uso
+
+### Opción rápida (recomendada)
+
+Ejecutar:
+
+```powershell
+.\start-all.ps1
+```
+
+Esto inicializa:
+
+* Entorno virtual
+* Base de datos `events.db`
+* Detector en `src/main.py`
+* Dashboard en `http://localhost:8501`
+
+### Opción manual
+
+1. Lanzar el detector:
+
+   ```bash
+   python -m src.main
+   ```
+2. Abrir el dashboard:
+
+   ```bash
+   streamlit run dashboard/app.py
+   ```
+
+---
+
+## 📊 Dashboard
+
+El panel de control incluye:
+
+* Tabla de eventos en tiempo real.
+* Gráficos de tráfico y anomalías.
+* Filtro por IP, score ML, fecha.
+* Botón de **bloquear IPs**.
+* Exportar reportes CSV/PDF.
+* Programar reportes automáticos.
+
+---
+
+## 📧 Alertas en Telegram
+
+Cada vez que se detecta una anomalía:
+
+* Se guarda en la BD.
+* Se envía un mensaje automático al grupo configurado.
+
+Ejemplo:
+
+```
+🚨 ALERTA DDoS 🚨
+IP: 8.8.8.8
+Score ML: 0.87
+Requests: 120 en 5s
 ```
 
 ---
 
-## 📂 Project Structure
-```
-├── src
-│   ├── main.py           # Main detection script
-│   ├── alerts.txt        # Log file for alert messages
-├── docs
-│   ├── manual-user.md    # User manual documentation
-├── README.md             # Project documentation
+## 🔮 Roadmap
+
+* 🔧 Mejorar calibración ML con datasets reales.
+* 📨 Añadir más canales de alerta (Slack, Email).
+* 🐳 Dockerizar para despliegue fácil.
+* 🌍 Integrar Threat Intelligence (IP reputation).
+* ⚔️ Firewall auto-block nativo.
+
+---
+
+## 🤝 Contribuciones
+
+Las PRs y sugerencias son bienvenidas.
+Si tienes ideas de mejora, abre un *issue* o un *pull request*.
+
+---
+
+## 📜 Licencia
+
+MIT License – libre para usar, modificar y compartir.
+
+---
+
+## 👨‍💻 Autor
+
+**Josep Roura Fernandez**
+Estudiante de Ingeniería de Telecomunicaciones y apasionado por la **ciberseguridad aplicada**.
+
+* [LinkedIn](https://www.linkedin.com/in/josep-roura-fernandez)
+* [GitHub](https://github.com/<usuario>)
+
+---
+
 ```
 
 ---
 
-## ⚙️ Configuration
-
-### 1. Telegram Bot Configuration
-1. Go to **Telegram** and search for `@BotFather`.
-2. Use the command `/newbot` to create a new bot.
-3. Follow the steps to obtain your **bot token**.
-4. Add your bot to a Telegram group and send any message in the group.
-5. Visit this URL to obtain the **group ID**:  
+¿Quieres que te prepare también un **`CHANGELOG.md`** inicial para acompañar al README y darle todavía más nivel profesional en GitHub?
 ```
-https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
-```
-6. Note down the **bot token** and **group ID** for the next step.
-
-### 2. System Configuration
-In the `main.py` file, modify the following values:
-
-```python
-# Configuration
-MY_IP = "192.168.1.34"    # Your local IP address
-REQUEST_THRESHOLD = 5      # Number of requests allowed in the time window
-TIME_WINDOW = 5            # Time window (in seconds) for analyzing traffic
-BLOCK_TIME = 15            # Time (in seconds) to block an IP after an alert
-
-# Telegram Configuration
-TOKEN = "<YOUR_BOT_TOKEN>"
-CHAT_ID = "<YOUR_GROUP_ID>"
-```
-
----
-
-## ▶️ How to Run
-
-1. Clone this repository:
-```
-git clone <repository_link>
-cd <project_folder>
-```
-
-2. Run the detection system:
-```
-python src/main.py
-```
-
-3. The terminal will display network activity, and alerts will be sent to your Telegram group if suspicious activity is detected.
-
----
-
-## 📄 Log File (`alerts.txt`)
-Each detected attack will be logged in `alerts.txt` with the following format:
-```
-ALERT: The IP 192.168.0.10 has sent 6 requests in the last 5 seconds.
-ALERT: The IP 10.0.0.5 has sent 8 requests in the last 5 seconds.
-```
-
----
-
-## 🚨 Important Notes
-
-- The system only monitors incoming traffic directed to your IP address.
-- Ensure your Python environment has the necessary permissions to run `Scapy` and access network interfaces.
-- Running the system as **Administrator** or **Root** may be required for full functionality.
-
----
-
-## 📈 Future Improvements
-
-🔹 Implement log file rotation to manage large volumes of alerts.  
-🔹 Add email alert integration for additional security notifications.  
-🔹 Improve IP filtering and threat intelligence integration for smarter detection.
-
----
-
-## 🤝 Contributing
-Contributions are welcome! Feel free to submit issues, feature requests, or pull requests to improve the system.
-
----
-
-## 📧 Contact
-If you have any questions or suggestions, feel free to reach out. I'm open to feedback and collaboration!
-
