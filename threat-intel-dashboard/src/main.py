@@ -1,74 +1,143 @@
 from __future__ import annotations
-import argparse, json, time as _t
-from datetime import datetime, timezone
-from . import db
-from .ti.resolve import resolve_ip_all, resolve_domain_all, resolve_hash_all
+import argparse, sqlite3, json
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
-def _now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+from reportlab.lib.units import mm
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Table, TableStyle, SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
 
-def resolve_and_store_ip(ip: str):
-    res = resolve_ip_all(ip)
-    if not res:
-        print("[ERR] No TI data (IP)")
-        return
-    geo = res.get("geo", {})
-    db.upsert_ioc("ip", ip, first_seen=_now(), last_seen=_now(), ti_score=int(res.get("ti_score", 0)))
-    profile = {"country": geo.get("country"), "lat": geo.get("lat"), "lon": geo.get("lon"),
-               "org": res.get("org"), "ti_score": res.get("ti_score")}
-    db.upsert_attr("ip", ip, "profile", json.dumps(profile, separators=(",",":")), int(_t.time()))
-    for src, payload in (res.get("sources") or {}).items():
-        db.upsert_attr("ip", ip, src, json.dumps(payload, separators=(",",":")), int(_t.time()))
-    print(f"[OK] IP {ip} ti_score={res.get('ti_score')} sources={list((res.get('sources') or {}).keys())}")
+from .config import DB_PATH, REPORTS_DIR, ROOT
 
-def resolve_and_store_domain(domain: str):
-    res = resolve_domain_all(domain)
-    if not res:
-        print("[ERR] No TI data (domain)")
-        return
-    db.upsert_ioc("domain", domain, first_seen=_now(), last_seen=_now(), ti_score=int(res.get("ti_score", 0)))
-    profile = {"ti_score": res.get("ti_score")}
-    db.upsert_attr("domain", domain, "profile", json.dumps(profile, separators=(",",":")), int(_t.time()))
-    for src, payload in (res.get("sources") or {}).items():
-        db.upsert_attr("domain", domain, src, json.dumps(payload, separators=(",",":")), int(_t.time()))
-    print(f"[OK] DOMAIN {domain} ti_score={res.get('ti_score')} sources={list((res.get('sources') or {}).keys())}")
+LOGO_PATHS = [
+    ROOT / "assets" / "logo.png",
+    ROOT / "assets" / "logo.jpg"
+]
 
-def resolve_and_store_hash(h: str):
-    res = resolve_hash_all(h)
-    if not res:
-        print("[ERR] No TI data (hash)")
-        return
-    db.upsert_ioc("hash", h, first_seen=_now(), last_seen=_now(), ti_score=int(res.get("ti_score", 0)))
-    # snapshot de hash (perfil VT básico)
-    file_prof = res.get("file", {}) or {}
-    db.upsert_attr("hash", h, "profile", json.dumps({"ti_score": res.get("ti_score"), **file_prof}, separators=(",",":")), int(_t.time()))
-    for src, payload in (res.get("sources") or {}).items():
-        db.upsert_attr("hash", h, src, json.dumps(payload, separators=(",",":")), int(_t.time()))
-    print(f"[OK] HASH {h} ti_score={res.get('ti_score')} sources={list((res.get('sources') or {}).keys())}")
+def _now_utc() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+def _read_data(hours: int):
+    con = sqlite3.connect(str(DB_PATH))
+    con.row_factory = sqlite3.Row
+    try:
+        since = (datetime.now(timezone.utc) - timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M:%S")
+        rows = con.execute("""
+            SELECT ioc_type, value, ti_score, last_seen
+            FROM ioc
+            WHERE last_seen >= ?
+            ORDER BY ti_score DESC, last_seen DESC
+        """, (since,)).fetchall()
+        prof = con.execute("""
+            SELECT ioc_type, value, json
+            FROM ioc_attrs
+            WHERE source='profile'
+        """).fetchall()
+    finally:
+        con.close()
+
+    prof_map = {}
+    for r in prof:
+        try:
+            prof_map[(r["ioc_type"], r["value"])] = json.loads(r["json"])
+        except Exception:
+            prof_map[(r["ioc_type"], r["value"])] = {}
+
+    data = []
+    for r in rows:
+        p = prof_map.get((r["ioc_type"], r["value"]), {})
+        data.append({
+            "ioc_type": r["ioc_type"],
+            "value": r["value"],
+            "ti_score": r["ti_score"],
+            "country": p.get("country"),
+            "org": p.get("org"),
+            "last_seen": r["last_seen"],
+        })
+    return data
+
+def generate_pdf(hours: int = 24) -> str:
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    out_pdf = REPORTS_DIR / f"report_{hours}h_{stamp}.pdf"
+
+    data = _read_data(hours)
+    styles = getSampleStyleSheet()
+    story = []
+
+    # Encabezado
+    # Logo (si existe)
+    logo = next((str(p) for p in LOGO_PATHS if p.exists()), None)
+    if logo:
+        # Usamos canvas directo para el logo en el margen superior
+        pass
+
+    title = Paragraph("<b>Threat Intelligence Report</b>", styles["Title"])
+    meta = Paragraph(f"Generated: {_now_utc()} &nbsp;&nbsp;•&nbsp;&nbsp; Window: last {hours}h", styles["Normal"])
+    story += [title, meta, Spacer(1, 6*mm)]
+
+    # KPIs
+    total = len(data)
+    high = sum(1 for r in data if (r["ti_score"] or 0) >= 70)
+    med  = sum(1 for r in data if 40 <= (r["ti_score"] or 0) < 70)
+    low  = sum(1 for r in data if (r["ti_score"] or 0) < 40)
+
+    kpi = Table([
+        ["Total IOCs", "High (≥70)", "Medium (40–69)", "Low (<40)"],
+        [str(total), str(high), str(med), str(low)]
+    ], colWidths=[40*mm, 40*mm, 40*mm, 40*mm])
+    kpi.setStyle(TableStyle([
+        ("BACKGROUND", (0,0), (-1,0), colors.HexColor("#111111")),
+        ("TEXTCOLOR", (0,0), (-1,0), colors.white),
+        ("ALIGN", (0,0), (-1,-1), "CENTER"),
+        ("FONTNAME", (0,0), (-1,0), "Helvetica-Bold"),
+        ("FONTSIZE", (0,0), (-1,0), 11),
+        ("BOX", (0,0), (-1,-1), 0.25, colors.black),
+        ("GRID", (0,0), (-1,-1), 0.25, colors.grey),
+        ("FONTSIZE", (0,1), (-1,-1), 12),
+    ]))
+    story += [kpi, Spacer(1, 6*mm)]
+
+    # Tabla principal (recortada a 60 filas para PDF)
+    table_data = [["Type","Value","TI score","Country","Org/ASN","Last seen"]]
+    for r in data[:60]:
+        table_data.append([
+            r["ioc_type"], r["value"], r["ti_score"] if r["ti_score"] is not None else "",
+            r.get("country") or "", r.get("org") or "", r["last_seen"]
+        ])
+
+    tbl = Table(table_data, colWidths=[20*mm, 55*mm, 20*mm, 20*mm, 55*mm, 30*mm])
+    tbl.setStyle(TableStyle([
+        ("BACKGROUND", (0,0), (-1,0), colors.HexColor("#f5f5f5")),
+        ("FONTNAME", (0,0), (-1,0), "Helvetica-Bold"),
+        ("ALIGN", (0,0), (-1,0), "LEFT"),
+        ("FONTSIZE", (0,0), (-1,0), 10),
+        ("GRID", (0,0), (-1,-1), 0.25, colors.HexColor("#cccccc")),
+        ("ROWBACKGROUNDS", (0,1), (-1,-1), [colors.white, colors.HexColor("#fafafa")]),
+    ]))
+    story.append(tbl)
+
+    doc = SimpleDocTemplate(str(out_pdf), pagesize=A4, leftMargin=15*mm, rightMargin=15*mm, topMargin=15*mm, bottomMargin=15*mm)
+
+    def _on_first_page(c, doc_):
+        if logo:
+            c.drawImage(logo, x=15*mm, y=A4[1]-25*mm, width=25*mm, height=25*mm, preserveAspectRatio=True, mask='auto')
+        c.setFont("Helvetica", 9)
+        c.setFillColor(colors.grey)
+        c.drawRightString(A4[0]-15*mm, A4[1]-10*mm, "Generated by Threat Intelligence Dashboard")
+
+    doc.build(story, onFirstPage=_on_first_page)
+    return str(out_pdf)
 
 def main():
-    ap = argparse.ArgumentParser(description="Threat Intelligence CLI")
-    ap.add_argument("--init-db", action="store_true", help="Crear/migrar DB")
-    ap.add_argument("--ioc-ip", type=str, help="Resolver IP (multi-fuente) y registrar")
-    ap.add_argument("--ioc-domain", type=str, help="Resolver dominio (multi-fuente) y registrar")
-    ap.add_argument("--ioc-hash", type=str, help="Resolver hash (VirusTotal) y registrar")
+    ap = argparse.ArgumentParser(description="Generate a PDF report with KPIs and summary table.")
+    ap.add_argument("--hours", type=int, default=24)
     args = ap.parse_args()
-
-    if args.init_db:
-        db.init_db()
-        print("[OK] DB inicializada")
-
-    if args.ioc_ip:
-        db.init_db()
-        resolve_and_store_ip(args.ioc_ip)
-
-    if args.ioc_domain:
-        db.init_db()
-        resolve_and_store_domain(args.ioc_domain)
-
-    if args.ioc_hash:
-        db.init_db()
-        resolve_and_store_hash(args.ioc_hash)
+    path = generate_pdf(args.hours)
+    print(json.dumps({"pdf": path}, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
