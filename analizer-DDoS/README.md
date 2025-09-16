@@ -175,4 +175,4 @@ MIT License – libre para usar, modificar y compartir.
 Estudiante de Ingeniería de Telecomunicaciones y apasionado por la **ciberseguridad aplicada**.
 
 * [LinkedIn](https://www.linkedin.com/in/josep-roura-fernandez)
-* [GitHub](https://github.com/<usuario>)
+* [GitHub](https://github.com/Josep-Roura/)
