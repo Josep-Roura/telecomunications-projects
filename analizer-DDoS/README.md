@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ DDoS Analyzer with Machine Learning & Dashboard
 
 Este proyecto es un **sistema de detección de ataques DDoS** desarrollado en **Python**.  
@@ -56,7 +55,6 @@ analizer-DDoS/
    ```bash
    git clone https://github.com/<usuario>/analizer-DDoS.git
    cd analizer-DDoS
-````
 
 2. Crear entorno virtual:
 
@@ -178,12 +176,3 @@ Estudiante de Ingeniería de Telecomunicaciones y apasionado por la **cibersegur
 
 * [LinkedIn](https://www.linkedin.com/in/josep-roura-fernandez)
 * [GitHub](https://github.com/<usuario>)
-
----
-
-```
-
----
-
-¿Quieres que te prepare también un **`CHANGELOG.md`** inicial para acompañar al README y darle todavía más nivel profesional en GitHub?
-```
