@@ -1,0 +1,1112 @@
+{
+  "13.70.79.200": {
+    "lat": -33.8672,
+    "lon": 151.1997,
+    "country": "Australia",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "104.26.9.44": {
+    "lat": 43.6561,
+    "lon": -79.3406,
+    "country": "Canada",
+    "org": "CLOUDFLARENET"
+  },
+  "149.154.167.220": {
+    "lat": 51.5081,
+    "lon": -0.1278,
+    "country": "United Kingdom",
+    "org": "Telegram Messenger Inc"
+  },
+  "104.18.41.41": {
+    "lat": 43.6561,
+    "lon": -79.3406,
+    "country": "Canada",
+    "org": "CLOUDFLARENET"
+  },
+  "149.154.167.92": {
+    "lat": 51.5081,
+    "lon": -0.1278,
+    "country": "United Kingdom",
+    "org": "Telegram Messenger Inc"
+  },
+  "104.18.32.47": {
+    "lat": 43.6561,
+    "lon": -79.3406,
+    "country": "Canada",
+    "org": "CLOUDFLARENET"
+  },
+  "104.18.39.21": {
+    "lat": 43.6561,
+    "lon": -79.3406,
+    "country": "Canada",
+    "org": "CLOUDFLARENET"
+  },
+  "140.82.121.4": {
+    "lat": 50.1169,
+    "lon": 8.6837,
+    "country": "Germany",
+    "org": "GITHUB"
+  },
+  "34.159.227.151": {
+    "lat": 50.1159,
+    "lon": 8.6702,
+    "country": "Germany",
+    "org": "GOOGLE-CLOUD-PLATFORM"
+  },
+  "13.89.179.9": {
+    "lat": 41.6015,
+    "lon": -93.6127,
+    "country": "United States",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "151.101.194.217": {
+    "lat": 37.7642,
+    "lon": -122.3993,
+    "country": "United States",
+    "org": "FASTLY"
+  },
+  "157.240.5.61": {
+    "lat": 40.4153,
+    "lon": -3.694,
+    "country": "Spain",
+    "org": "FACEBOOK"
+  },
+  "20.50.201.200": {
+    "lat": 52.3759,
+    "lon": 4.8975,
+    "country": "The Netherlands",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "20.50.201.203": {
+    "lat": 52.3759,
+    "lon": 4.8975,
+    "country": "The Netherlands",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "135.236.136.184": {
+    "lat": 53.3382,
+    "lon": -6.2591,
+    "country": "Ireland",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "104.26.8.44": {
+    "lat": 43.6561,
+    "lon": -79.3406,
+    "country": "Canada",
+    "org": "CLOUDFLARENET"
+  },
+  "13.89.178.26": {
+    "lat": 41.6015,
+    "lon": -93.6127,
+    "country": "United States",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "20.42.65.94": {
+    "lat": 38.7095,
+    "lon": -78.1539,
+    "country": "United States",
+    "org": "MICROSOFT-CORP-MSN-AS-BLOCK"
+  },
+  "34.117.59.81": {
+    "lat": 38.9296,
+    "lon": -94.5009,
+    "country": "United States",
+    "org": "GOOGLE-CLOUD-PLATFORM"
+  },
+  "163.117.131.60": {
+    "lat": 40.321,
+    "lon": -3.7225,
+    "country": "Spain",
+    "org": "Entidad Publica Empresarial Red.es"
+  },
+  "34.160.152.12": {
+    "lat": 38.9296,
+    "lon": -94.5009,
+    "country": "United States",
+    "org": "GOOGLE-CLOUD-PLATFORM"
+  },
+  "2.18.188.94": {
+    "lat": 40.5971,
+    "lon": -3.4974,
+    "country": "Spain",
+    "org": "Akamai International B.V."
+  },
+  "163.117.18.60": {
+    "lat": 40.321,
+    "lon": -3.7225,
+    "country": "Spain",
+    "org": "Entidad Publica Empresarial Red.es"
+  },
+  "2.18.188.86": {
+    "lat": 40.5971,
+    "lon": -3.4974,
+    "country": "Spain",
+    "org": "Akamai International B.V."
+  },
+  "34.8.209.147": {
+    "lat": 38.9296,
+    "lon": -94.5009,
+    "country": "United States",
+    "org": "GOOGLE-CLOUD-PLATFORM"
+  },
+  "142.250.200.132": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "country": "United Kingdom",
+    "org": "GOOGLE"
+  },
+  "3.233.158.26": {
+    "lat": 39.0373,
+    "lon": -77.4805,
+    "country": "United States",
+    "org": "AMAZON-AES"
+  },
+  "104.20.17.167": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "108.177.15.84": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "142.250.201.72": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "35.169.225.183": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "216.58.215.163": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "104.18.142.119": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "184.24.5.231": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "104.19.175.188": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.168.117.169": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "104.18.80.204": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "140.82.114.22": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "140.82.121.5": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "104.26.14.40": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.189.173.3": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "140.82.112.21": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "216.239.34.36": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.168.117.174": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.178.17.2": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "185.199.110.133": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "185.199.108.154": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.42.65.93": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.189.173.26": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.189.173.5": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "104.208.16.90": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.189.173.2": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "13.107.246.77": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.42.73.24": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.168.117.168": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.178.17.234": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "140.82.121.3": {
+    "lat": 50.1155,
+    "lon": 8.6842,
+    "country": "DE",
+    "org": "AS36459 GitHub, Inc."
+  },
+  "20.189.173.28": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.182.143.215": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "208.103.161.1": {
+    "lat": 37.7509,
+    "lon": -122.4153,
+    "country": "US",
+    "org": "AS33191 Notion Labs, Inc."
+  },
+  "208.103.161.2": {
+    "lat": 37.7509,
+    "lon": -122.4153,
+    "country": "US",
+    "org": "AS33191 Notion Labs, Inc."
+  },
+  "34.36.73.246": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "34.107.243.93": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "151.101.1.91": {
+    "lat": 37.7621,
+    "lon": -122.3971,
+    "country": "US",
+    "org": "AS54113 Fastly, Inc."
+  },
+  "20.42.65.89": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.82.228.9": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "4.207.24.68": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.242.39.171": {
+    "lat": 36.6676,
+    "lon": -78.3875,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.12": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "13.69.239.73": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.73.194.208": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "2.22.146.185": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS20940 Akamai International B.V."
+  },
+  "135.236.137.174": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "13.107.253.43": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.182.143.208": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.9": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.4": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "104.208.16.92": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "13.69.116.105": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "185.125.190.29": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "country": "GB",
+    "org": "AS41231 Canonical Group Limited"
+  },
+  "13.89.179.11": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.11": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "13.69.116.104": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "149.154.167.151": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS62041 Telegram Messenger Inc"
+  },
+  "52.182.143.213": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.24": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.25": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "135.236.136.109": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "172.67.70.74": {
+    "lat": 37.7621,
+    "lon": -122.3971,
+    "country": "US",
+    "org": "AS13335 Cloudflare, Inc."
+  },
+  "216.58.209.67": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS15169 Google LLC"
+  },
+  "40.74.98.192": {
+    "lat": 34.6938,
+    "lon": 135.5011,
+    "country": "JP",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "104.26.12.38": {
+    "lat": 37.7621,
+    "lon": -122.3971,
+    "country": "US",
+    "org": "AS13335 Cloudflare, Inc."
+  },
+  "142.250.201.14": {
+    "lat": 43.297,
+    "lon": 5.3811,
+    "country": "FR",
+    "org": "AS15169 Google LLC"
+  },
+  "20.190.177.23": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "country": "FR",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "4.175.223.124": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "150.171.22.17": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "150.171.28.11": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "151.101.130.217": {
+    "lat": 37.7621,
+    "lon": -122.3971,
+    "country": "US",
+    "org": "AS54113 Fastly, Inc."
+  },
+  "104.46.162.226": {
+    "lat": -37.814,
+    "lon": 144.9633,
+    "country": "AU",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "2.18.188.97": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS20940 Akamai International B.V."
+  },
+  "142.250.184.174": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS15169 Google LLC"
+  },
+  "142.250.184.1": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "216.58.215.164": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "142.250.184.161": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.222.132.35": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.92.35.242": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "18.213.17.142": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "172.217.168.162": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "142.250.201.66": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "35.190.0.66": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "35.186.193.173": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "142.250.185.2": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "198.47.127.19": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "142.250.200.110": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "4.231.128.59": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "4.207.247.137": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "37.252.171.85": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "23.43.249.6": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.17.209.150": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "13.224.83.105": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS16509 Amazon.com, Inc."
+  },
+  "100.90.1.1": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "20.42.65.91": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "151.101.134.217": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS54113 Fastly, Inc."
+  },
+  "204.79.197.203": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8068 Microsoft Corporation"
+  },
+  "51.104.15.252": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "country": "GB",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "40.79.167.8": {
+    "lat": -33.8678,
+    "lon": 151.2073,
+    "country": "AU",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "199.232.34.217": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS54113 Fastly, Inc."
+  },
+  "20.42.73.25": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "34.36.137.203": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "79.127.216.204": {
+    "lat": 50.1155,
+    "lon": 8.6842,
+    "country": "DE",
+    "org": "AS60068 Datacamp Limited"
+  },
+  "79.116.255.43": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS57269 DIGI SPAIN TELECOM S.L."
+  },
+  "20.44.10.123": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "51.105.71.137": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "country": "GB",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.16": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.42.65.84": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "104.208.16.89": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.50.73.11": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "51.137.3.145": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.190.177.82": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "country": "FR",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.172.73": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "51.116.253.170": {
+    "lat": 50.1155,
+    "lon": 8.6842,
+    "country": "DE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "72.154.7.16": {
+    "lat": 47.1301,
+    "lon": -119.2781,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "2.23.30.52": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS16625 Akamai Technologies, Inc."
+  },
+  "20.189.173.23": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.168.117.175": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.42.73.27": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.173.10": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.13.204.76": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.103.156.88": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.31.169.57": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "4.207.247.139": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "96.16.86.12": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS20940 Akamai International B.V."
+  },
+  "100.100.1.1": {
+    "lat": null,
+    "lon": null,
+    "country": null,
+    "org": null
+  },
+  "52.168.112.66": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "184.24.0.227": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS16625 Akamai Technologies, Inc."
+  },
+  "79.116.255.35": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS57269 DIGI SPAIN TELECOM S.L."
+  },
+  "51.132.193.104": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "country": "GB",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "34.228.45.57": {
+    "lat": 39.0437,
+    "lon": -77.4875,
+    "country": "US",
+    "org": "AS14618 Amazon.com, Inc."
+  },
+  "20.190.177.84": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "country": "FR",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "34.120.208.123": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "104.208.16.95": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "34.110.138.217": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "40.74.98.193": {
+    "lat": 34.6938,
+    "lon": 135.5011,
+    "country": "JP",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.168.112.67": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "34.110.253.53": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "country": "US",
+    "org": "AS396982 Google LLC"
+  },
+  "142.250.184.162": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS15169 Google LLC"
+  },
+  "149.154.164.250": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS62041 Telegram Messenger Inc"
+  },
+  "20.42.65.88": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "40.79.189.58": {
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "country": "JP",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.182.143.211": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "104.208.16.88": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "52.182.143.214": {
+    "lat": 41.6005,
+    "lon": -93.6091,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "132.164.187.92": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "51.124.78.146": {
+    "lat": 52.374,
+    "lon": 4.8897,
+    "country": "NL",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "104.46.162.227": {
+    "lat": -37.814,
+    "lon": 144.9633,
+    "country": "AU",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.189.172.76": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "2.16.88.71": {
+    "lat": 40.4165,
+    "lon": -3.7026,
+    "country": "ES",
+    "org": "AS20940 Akamai International B.V."
+  },
+  "44.215.234.239": {
+    "lat": 39.0437,
+    "lon": -77.4875,
+    "country": "US",
+    "org": "AS14618 Amazon.com, Inc."
+  },
+  "13.107.5.93": {
+    "lat": 47.674,
+    "lon": -122.1215,
+    "country": "US",
+    "org": "AS8068 Microsoft Corporation"
+  },
+  "20.189.172.32": {
+    "lat": 37.3394,
+    "lon": -121.895,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "140.82.121.6": {
+    "lat": 50.1155,
+    "lon": 8.6842,
+    "country": "DE",
+    "org": "AS36459 GitHub, Inc."
+  },
+  "20.199.58.43": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "country": "FR",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "20.42.65.90": {
+    "lat": 38.7135,
+    "lon": -78.1594,
+    "country": "US",
+    "org": "AS8075 Microsoft Corporation"
+  },
+  "172.67.68.156": {
+    "lat": 37.7621,
+    "lon": -122.3971,
+    "country": "US",
+    "org": "AS13335 Cloudflare, Inc."
+  },
+  "13.69.239.72": {
+    "lat": 53.3331,
+    "lon": -6.2489,
+    "country": "IE",
+    "org": "AS8075 Microsoft Corporation"
+  }
+}

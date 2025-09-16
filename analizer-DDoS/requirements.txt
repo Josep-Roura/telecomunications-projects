@@ -1,0 +1,9 @@
+scapy
+requests
+python-dotenv
+streamlit
+plotly
+pandas
+scikit-learn
+joblib
+numpy

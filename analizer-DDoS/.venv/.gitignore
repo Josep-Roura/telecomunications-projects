@@ -1,0 +1,21 @@
+# Entorno virtual
+.venv/
+env/
+
+# Config local
+.env
+*.log
+
+# Datos
+data/*.db
+data/*.csv
+reports/
+__pycache__/
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# Otros temporales
+.DS_Store
+Thumbs.db
